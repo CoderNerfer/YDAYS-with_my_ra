@@ -92,9 +92,20 @@ body{
     position: relative;
     transition: .3s linear;
 }
+.navbar-menu input{
+    background-color: none;
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 5px;
+    border: 1px solid #f1f1f1;
+    color: #f1f1f1;
+    padding: 5px;
+}
 
 .navbar-menu a{
-    color: #fff;
+    color: #f1f1f1;
     font-size: 20px;
     font-weight: 500;
     margin-left: 30px;
@@ -116,6 +127,10 @@ body{
 
 .sticky .navbar-menu a{
     color: #13022D;
+}
+.sticky .navbar-menu input{
+    color: #13022D;
+    border: 1px solid #13022D;
 }
 
 .sticky .menu-toggler span{
@@ -150,7 +165,7 @@ body{
     font-size: 60px;
     margin-bottom: 60px;
 }
-
+/* 
 #home .content h1::after{
     content: " une équipe";
     animation: textanim 10s linear infinite;
@@ -166,7 +181,7 @@ body{
     75%{
         content: " des étudiants";
     }
-}
+} */
 
 .sm a{
     color: transparent;

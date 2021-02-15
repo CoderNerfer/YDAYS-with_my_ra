@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>With My RA - FR</title>
+    <title>{{.Title}}</title>
 
 
     <link rel="stylesheet" href="../public/style/style.css">
@@ -33,11 +33,18 @@
                 <span></span>
             </button>
             <div class="navbar-menu">
-                <a href="#home">Home</a>
-                <a href="#about">Notre Projet</a>
-                <a href="#equipe">L'Équipe</a>
-                <a href="#works">Galerie</a>
-                <a href="#archive">Archive</a>
+                <form action="/" method="post" class="form">
+                    
+                    <input type="submit" value="FR" class="submit" name="submit">
+                    <input type="submit" value="EN" class="submit" name="submit">
+                    <a href="#home">{{.Link1}}</a>
+                    <a href="#about">{{.Link2}}</a>
+                    <a href="#equipe">{{.Link3}}</a>
+                    <a href="#works">{{.Link4}}</a>
+                    <a href="#archive">{{.Link5}}</a>
+                </form>
+
+                
             </div>
         </div>       
     </nav>
@@ -48,7 +55,7 @@
             <!--<video src="/video.mp4" autoplay muted loop></video>-->
             <div class="inner-width">
                 <div class="content">
-                    <h1>Nous sommes</h1>
+                    <h1>{{.Home}}</h1>
                     <!--<div class="sm">
                         <a href="https://www.facebook.com/With-my-RA-102180141433064" target="_blank" class="fab fa-facebook-f"></a>
                         <a href="#" class="fab fa-twitter"></a>
@@ -56,8 +63,8 @@
                         <a href="#" class="fab fa-linkedin"></a>
                     </div>-->
                     <div class="button">
-                        <a href="#" id="copybutton" class="copybutton"> Nous contacter par mail</a>
-                        <a href="https://www.facebook.com/withmyra/"target="_blank">Nous contacter par facebook</a>
+                        <a href="#" id="copybutton" class="copybutton">{{.Email}}</a>
+                        <a href="https://www.facebook.com/withmyra/"target="_blank">{{.Facebook}}</a>
                     </div>
                 </div>
             </div>
@@ -71,7 +78,7 @@
                 +
             </div>
             <img src="../public/logo/ICON-APP-ERA.png" alt="">
-            <p>Notre adresse mail, à été copiée dans votre presse-papier</p>
+            <p>{{.Popup}}</p>
             
         </div>
     </div>
@@ -79,19 +86,19 @@
     <!-- Notre projet -->
     <section id="about">
         <div class="inner-width">
-            <h1 class="section-title">Notre projet</h1>
+            <h1 class="section-title">{{.Projet}}</h1>
             <div class="about-content">
                 <img src="../public/logo/ICON-APP-ERA.png" alt="" class="about-pic">
                 <div class="about-text">
-                    <h2> Projet With My RA </h2>
+                    <h2> {{.Prensation}} </h2>
                 <h3>
-                    <span>Informatique</span>
-                    <span>Animation 3D</span>
-                    <span>Direction artistique</span>
-                    <span>Stratégie de communication 360</span>
+                    <span>{{.Span1}}</span>
+                    <span>{{.Span2}}</span>
+                    <span>{{.Span3}}</span>
+                    <span>{{.Span4}}</span>
                 </h3>
                 <p>
-                    With my RA c’est une équipe d’étudiants de <a href="https://www.ynov-lyon.com/qui-sommes-nous/" target="_blank"><strong>Lyon Ynov Campus</strong> </a>  <strong> utilisant leurs compétences et leurs apprentissages</strong> en animation, développement, création design, UX design, graphisme, marketing pour <strong>créer une expérience en réalité augmentée. </strong> <br> Le projet s’inscrit au sein de l’Incubateur La toile,propose aux étudiants de <strong>s'exprimer via différents outils de communication sur des sujets engagés</strong> , entraînant une prise de conscience de la génération Z. <br><br>L’ambition de With my RA est de  <strong>repenser l’art à l’ère du digital</strong> , toujours en compagnie de la mascotte ERA.
+                    {{.About1}}<a href="https://www.ynov-lyon.com/qui-sommes-nous/" target="_blank"><strong>{{.About2}}</strong> </a>  <strong>{{.About3}}</strong>{{.About4}}<strong>{{.About5}}</strong> <br>{{.About6}}<strong>{{.About7}}</strong>{{.About8}}<br><br>{{.About9}}<strong>{{.About10}}</strong>{{.About11}}
                 </p>
                 </div>
             </div>
@@ -106,7 +113,7 @@
                 <div class="membre">
                     <img src="../public/avatar/clem.png" alt="">
                     <h4>Clément</h4>
-                    <p> <br><strong> Développeur informatique en B1</strong> <br><br>Fan de poulet, toujours l'ordi à porter de main et le petit calepin</p>
+                    <p> <br><strong> {{.Classinfo}}</strong> <br><br>{{.Clem}}</p>
                     <div class="reso">
                         <a href="#" class="fab fa-linkedin"></a>
                        </div>
@@ -115,7 +122,7 @@
                 <div class="membre">
                     <img src="../public/avatar/mat.png" alt="">
                     <h4>Mathis</h4>
-                    <p> <br><strong> Développeur informatique en B1</strong><br><br>Fan de canard et adepte du travail nocturne.</p>
+                    <p> <br><strong> {{.Classinfo}}</strong><br><br>{{.Mathis}}</p>
                     <div class="reso">
                         <a href="#" class="fab fa-linkedin"></a>
                        </div>
@@ -124,7 +131,7 @@
                 <div class="membre">
                     <img src="../public/avatar/steph.png" alt="">
                     <h4>Stéphane</h4>
-                    <p><br><strong>Anim 3D Jeux vidéos</strong><br><br>Je suis sportif (basket,boxe etc..)j'aime aussi beaucoup m'amuser et faire la fête</p>
+                    <p><br><strong>{{.Classanim}}</strong><br><br>{{.Steph}}</p>
                     <div class="reso">
                         <a href="#" class="fab fa-linkedin"></a>
                        </div>
@@ -133,7 +140,7 @@
                 <div class="membre">
                     <img src="../public/avatar/lili.png" alt="">
                     <h4>Lilian</h4>
-                    <p><br><strong>Anim 3D Jeux vidéos</strong><br><br>Je pensais être destiné à finir dans le monde de la science brut mais bien plus attiré par le divertissement je débarque finalement de l'univers de l'animation 3D,du Jeux Vidéo et du dessin ! J'ai 20 ans, j'aime les pates carbonara et les poivrons.</p>
+                    <p><br><strong>{{.Classanim}}</strong><br><br>{{.Lilian}}</p>
                     <div class="reso">
                         <a href="#" class="fab fa-linkedin"></a>
                        </div>
@@ -142,7 +149,7 @@
                 <div class="membre">
                     <img src="../public/avatar/ju.png" alt="">
                     <h4>Julien</h4>
-                    <p><br><strong>Anim 3D Jeux vidéos</strong><br><br>Je suis un gros nolife, et accessoirement le mec au fond de la classe qui observe et analyse tout en silence.</p>
+                    <p><br><strong>{{.Classanim}}</strong><br><br>{{.Ju}}</p>
                     <div class="reso">
                         <a href="#" class="fab fa-linkedin"></a>
                        </div>
@@ -151,7 +158,7 @@
                 <div class="membre">
                     <img src="../public/avatar/lele.png" alt="">
                     <h4>Léane</h4>
-                    <p><br><strong>Cheffe de projet</strong> <br><br>Fan de brocolis, toujours le sourire aux lèvres et une BD sous le bras.</p>
+                    <p><br><strong>{{.Classchefe}}</strong> <br><br>{{.Lele}}</p>
                     <div class="reso">
                         <a href="https://www.linkedin.com/in/leane-chamouton-0a5a45163/" target="_blank" class="fab fa-linkedin"></a>
                        </div>
@@ -160,7 +167,7 @@
                 <div class="membre">
                     <img src="../public/avatar/mel.png" alt="">
                     <h4>Mélanie</h4>
-                    <p><br><strong>M1 Strat' de Com'</strong><br><br>Sur WMRA, je m'occupe des réseaux sociaux, tout ça tout ça. <br>Ma vie se résume en peu de mots : Rock, BD, Anime, Dessin et Future Streameuse <strong>🤘</strong> </p>
+                    <p><br><strong>{{.Classestratcom}}</strong><br><br>{{.Mel1}}<br>{{.Mel2}}<strong>🤘</strong> </p>
                     <div class="reso">
                         <a href="https://www.linkedin.com/in/melanieburtin-communication-resaux-sociaux-digital-league/"  target="_blank" class="fab fa-linkedin"></a>
                        </div>
@@ -169,7 +176,7 @@
                 <div class="membre">
                     <img src="../public/avatar/lou.png" alt="">
                     <h4>Louise</h4>
-                    <p><br><strong>M1 Direction Artistique Digitale</strong> <br><br>Dans la team WMRA je suis la Directrice Artistique donc je m'occupe de tout le process créatif et expérience utilisateur de l'application. <br>Le poney est une grande passion, j'adore le digital art et aussi les loutres.</p>
+                    <p><br><strong>{{.Classda}}</strong> <br><br>{{.Lou1}}<br>{{.Lou2}}</p>
                    <div class="reso">
                     <a href="https://www.linkedin.com/in/louise-knoery/" target="_blank" class="fab fa-linkedin"></a>
                    </div>
@@ -185,33 +192,33 @@
     <!-- Galerie -->
     <section id="works">
         <div class="inner-width">
-            <h1 class="section-title">Galerie</h1>
+            <h1 class="section-title">{{.Bd}}</h1>
             <div class="works">
                 <a href="../public/work/unicorn.png" class="work">
                     <img src="../public/work/unicorn.png" alt="">
                     <div class="info">
-                        <h3>Titre oeuvre</h3>
+                        <h3>{{.Titre}}</h3>
                         <div class="cat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, minima.</div>
                     </div>
                 </a>
                 <a href="../public/work/unicorn_back.png" class="work">
                     <img src="../public/work/unicorn_back.png" alt="">
                     <div class="info">
-                        <h3>Titre oeuvre</h3>
+                        <h3>{{.Titre}}</h3>
                         <div class="cat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, minima.</div>
                     </div>
                 </a>
                 <a href="../public/work/unicorn_happy.png" class="work">
                     <img src="../public/work/unicorn_happy.png" alt="">
                     <div class="info">
-                        <h3>Titre oeuvre</h3>
+                        <h3>{{.Titre}}</h3>
                         <div class="cat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, minima.</div>
                     </div>
                 </a>
                 <a href="../public/work/unicorn_money.png" class="work">
                     <img src="../public/work/unicorn_money.png" alt="">
                     <div class="info">
-                        <h3>Titre oeuvre</h3>
+                        <h3>{{.Titre}}</h3>
                         <div class="cat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, minima.</div>
                     </div>
                 </a>    
@@ -220,28 +227,28 @@
                 <a href="../public/work/unicorn.png" class="work">
                     <img src="../public/work/unicorn.png" alt="">
                     <div class="info">
-                        <h3>Titre oeuvre</h3>
+                        <h3>{{.Titre}}</h3>
                         <div class="cat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, minima.</div>
                     </div>
                 </a>
                 <a href="../public/work/unicorn_back.png" class="work">
                     <img src="../public/work/unicorn_back.png" alt="">
                     <div class="info">
-                        <h3>Titre oeuvre</h3>
+                        <h3>{{.Titre}}</h3>
                         <div class="cat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, minima.</div>
                     </div>
                 </a>
                 <a href="../public/work/unicorn_happy.png" class="work">
                     <img src="../public/work/unicorn_happy.png" alt="">
                     <div class="info">
-                        <h3>Titre oeuvre</h3>
+                        <h3>{{.Titre}}</h3>
                         <div class="cat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, minima.</div>
                     </div>
                 </a>
                 <a href="../public/work/unicorn_money.png" class="work">
                     <img src="../public/work/unicorn_money.png" alt="">
                     <div class="info">
-                        <h3>Titre oeuvre</h3>
+                        <h3>{{.Titre}}</h3>
                         <div class="cat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, minima.</div>
                     </div>
                 </a>   
@@ -253,8 +260,8 @@
     <!-- archive -->
     <section id="archive" class="dark">
         <div class="inner-width">
-            <h1 class="section-title">Archive</h1>
-            <p class="archive text">En mai 2020 With my RA dévoilait son exposition en ligne <strong>“Ma vie étudiante”</strong> . <br> Une autre année, une autre équipe. Huits étudiants qui avaient envie de parler, de rendre compte de ce passage si significatif.Parce que les années d’études sont celles où l’on goute à la liberté, on s’émancipe et on peux prendre de nouveaux chemins mais c’est aussi celles on l’on découvre de nouvelles obligations, de nouvelles difficultés. <strong>“C’est intense” </strong> <br> Dans l’exposition, des oeuvres abordant la précarité étudiante, le rapport au temps, celui aux interactions sociales mais aussi des témoignages recueillis à Lyon 2.</p>
+            <h1 class="section-title">{{.Archive}}</h1>
+            <p class="archive text">{{.Resume1}}<strong>{{.Resume2}}</strong> <br>{{.Resume3}}<strong>{{.Resume4}}</strong> <br>{{.Resume5}}</p>
 
             <div class="imagearchive">
                 <a href="../public/video/My_friends_my_strength_fichier_lourd.mp4" target="_blank" class="iarchive">
