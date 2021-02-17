@@ -69,8 +69,9 @@ var tpl *template.Template
 func main() {
 	tpl, _ = tpl.ParseGlob("template/*.html")
 	port := os.Getenv("PORT")
-	//the diffenrent possible path
+	// the diffenrent possible path
 	http.HandleFunc("/", getFormeHandler)
+	http.HandleFunc("/mentions_legales", getMentionLegaleHandler)
 	http.Handle("/public/", http.FileServer(http.Dir(".")))
 	log.Print("Listening on :" + port)
 	log.Fatal(http.ListenAndServe(":"+port, nil))
@@ -92,4 +93,10 @@ func getFormeHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	// fmt.Println(r.FormValue("submit"))
 	// tpl.ExecuteTemplate(w, "index.html", nil)
+}
+
+func getMentionLegaleHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("In Mentions Legales")
+
+	tpl.ExecuteTemplate(w, "mentions_legales.html", nil)
 }
