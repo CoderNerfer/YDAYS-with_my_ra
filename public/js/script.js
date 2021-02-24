@@ -26,6 +26,12 @@ $(document).ready(function(){
         console.log('done');
     });
 
+    $(".works").magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery:{enabled:true}
+      });
+
     document.querySelector('.close').addEventListener('click',function(){
         document.querySelector('.bg-modal').style.display = 'none';
     });
