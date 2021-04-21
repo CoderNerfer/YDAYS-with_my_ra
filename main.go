@@ -5,9 +5,7 @@ import (
 	"fmt"
 	"html/template"
 	"io/ioutil"
-	"log"
 	"net/http"
-	"os"
 )
 
 // JSON sstruct pour recup les element du json
@@ -68,14 +66,14 @@ var tpl *template.Template
 
 func main() {
 	tpl, _ = tpl.ParseGlob("template/*.html")
-	port := os.Getenv("PORT")
+	// port := os.Getenv("PORT")
 	// the diffenrent possible path
 	http.HandleFunc("/", getFormeHandler)
 	http.HandleFunc("/mentions_legales", getMentionLegaleHandler)
 	http.Handle("/public/", http.FileServer(http.Dir(".")))
-	log.Print("Listening on :" + port)
-	log.Fatal(http.ListenAndServe(":"+port, nil))
-	// http.ListenAndServe(":8080", nil)
+	// log.Print("Listening on :" + port)
+	// log.Fatal(http.ListenAndServe(":"+port, nil))
+	http.ListenAndServe(":8080", nil)
 }
 func getFormeHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("In Home")
