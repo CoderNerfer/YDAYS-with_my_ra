@@ -55,7 +55,9 @@ type JSON struct {
 	Lou1           string
 	Lou2           string
 	Bd             string
-	Titre          string
+	Titre1         string
+	Titre2         string
+	Titre3         string
 	Archive        string
 	Resume1        string
 	Resume2        string
