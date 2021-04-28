@@ -54,24 +54,7 @@ body{
     background-size: contain;
 }
 
-/*.full-screen{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.full-screen video{
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}*/
 
 .menu-toggler{
     background: none;
@@ -140,11 +123,11 @@ body{
 #home{
     height: 100vh;
     min-height: 500px;
-    /* si image remplacer le lien en dessous*/
+
     background: url(/bg.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    /*si vdieo enlever ligne dessous*/
+
     background-color: #13022D;
 }
 
@@ -165,23 +148,7 @@ body{
     font-size: 60px;
     margin-bottom: 60px;
 }
-/* 
-#home .content h1::after{
-    content: " une équipe";
-    animation: textanim 10s linear infinite;
-}
 
-@keyframes textanim{
-    25%{
-        content: " une équipe";
-    }
-    50%{
-        content: " des passionnées";
-    }
-    75%{
-        content: " des étudiants";
-    }
-} */
 
 .sm a{
     color: transparent;
